@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +48,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Minesweeper.executor": "Debug",
+    "Application.Minesweeper.executor": "Run",
     "JUnit.CommandProcessorTest.executor": "Run",
     "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
