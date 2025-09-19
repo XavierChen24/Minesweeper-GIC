@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added code for main function">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -51,6 +52,7 @@
     "Application.Minesweeper.executor": "Run",
     "JUnit.CommandProcessorTest.executor": "Run",
     "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
+    "JUnit.CommandProcessorTest.validateInitialInputTests.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -60,7 +62,7 @@
     "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/xavier/Desktop/Repos/interviews/Minesweeper-GIC/src/main/java/GIC/interview",
+    "last_opened_file_path": "/home/xavier/Desktop/Repos/interviews/Minesweeper--GIC-Interview-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -78,6 +80,7 @@
       <recent name="GIC.interview" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/GIC/interview" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -91,7 +94,7 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Minesweeper">
+  <component name="RunManager" selected="JUnit.CommandProcessorTest.validateInitialInputTests">
     <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
       <module name="test" />
@@ -136,6 +139,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommandProcessorTest.validateInitialInputTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.CommandProcessorTest" />
+      <option name="METHOD_NAME" value="validateInitialInputTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper--GIC-Interview" />
       <method v="2">
@@ -149,6 +168,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandProcessorTest.validateInitialInputTests" />
         <item itemvalue="Application.Minesweeper" />
         <item itemvalue="JUnit.CommandProcessorTest" />
         <item itemvalue="JUnit.CommandProcessorTest.testSingleIntegerInput" />
@@ -173,9 +193,87 @@
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
     </task>
+    <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
+      <option name="closed" value="true" />
+      <created>1758208399084</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1758208399084</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created class Diagram">
+      <option name="closed" value="true" />
+      <created>1758213329025</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1758213329025</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Updated some classes in class diagrams on second look">
+      <option name="closed" value="true" />
+      <created>1758213954666</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1758213954666</updated>
+    </task>
+    <task id="LOCAL-00004" summary="created commandprocessor, game and gamestatus classes">
+      <option name="closed" value="true" />
+      <created>1758249577831</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1758249577831</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Test case for validateInitialInput function should verify for&#10;1. 35% of the grid can be mines&#10;2. both values must be larger than 0. &#10;3. minimum size of grid is 2">
+      <option name="closed" value="true" />
+      <created>1758252266926</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1758252266926</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added code for input validation">
+      <option name="closed" value="true" />
+      <created>1758253002734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1758253002734</updated>
+    </task>
+    <task id="LOCAL-00007" summary="added code for main function">
+      <option name="closed" value="true" />
+      <created>1758253010804</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1758253010804</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added mockito because there are user inputs from console." />
+    <MESSAGE value="Created class Diagram" />
+    <MESSAGE value="Updated some classes in class diagrams on second look" />
+    <MESSAGE value="created commandprocessor, game and gamestatus classes" />
+    <MESSAGE value="Test case for validateInitialInput function should verify for&#10;1. 35% of the grid can be mines&#10;2. both values must be larger than 0. &#10;3. minimum size of grid is 2" />
+    <MESSAGE value="added code for input validation" />
+    <MESSAGE value="added code for main function" />
+    <option name="LAST_COMMIT_MESSAGE" value="added code for main function" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

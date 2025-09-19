@@ -76,11 +76,19 @@ class CommandProcessorTest {
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-                        commandProcessor.validateInitialInput(2, 36);
+                        commandProcessor.validateInitialInput(2, 1);
                     });
-                    assertEquals("Minimum size is 3", exception.getMessage());
+                    assertEquals("Minimum size is 3 and maximum size is 26", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateInitialInput(27, 9);
+                    });
+                    assertEquals("Minimum size is 3 and maximum size is 26", exception.getMessage());
                 }
         );
     }
+
+
 
 }

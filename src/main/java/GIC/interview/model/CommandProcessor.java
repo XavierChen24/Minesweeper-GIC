@@ -36,8 +36,8 @@ public class CommandProcessor {
         if (size <= 0 || mines <= 0) {
             throw new IllegalArgumentException("Only positive non-zero values are accepted");
         }
-        if (size < 3) {
-            throw new IllegalArgumentException("Minimum size is 3");
+        if (size < 3 || size > 26) {
+            throw new IllegalArgumentException("Minimum size is 3 and maximum size is 26");
         }
         if (mines > Math.floor(size * size * 0.35)) {
             throw new IllegalArgumentException("Maximum mines is 35% of the total squares");
