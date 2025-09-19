@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="Added GridTests for validating that the mine generated and the dimensions of the grid is correct">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added 2 more tests where all squares are hidden on init and also testing the count of bombs in a square is accurate">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GridTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GridTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +52,9 @@
     "Application.Minesweeper.executor": "Run",
     "JUnit.CommandProcessorTest.executor": "Run",
     "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
+    "JUnit.CommandProcessorTest.validateGridSizeTests.executor": "Run",
     "JUnit.CommandProcessorTest.validateInitialInputTests.executor": "Run",
+    "JUnit.CommandProcessorTest.validateSquareSelectionTest.executor": "Run",
     "JUnit.GridTest.executor": "Run",
     "JUnit.GridTest.testAdjacentSquares.executor": "Run",
     "JUnit.GridTest.testGenerateGridDimensions.executor": "Run",
@@ -101,8 +100,21 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridTest">
-    <configuration name="CommandProcessorTest.validateInitialInputTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CommandProcessorTest.validateMinesInputTests">
+    <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTest.validateGridSizeTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -112,7 +124,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.CommandProcessorTest" />
-      <option name="METHOD_NAME" value="validateInitialInputTests" />
+      <option name="METHOD_NAME" value="validateGridSizeTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTest.validateMinesInputTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.CommandProcessorTest" />
+      <option name="METHOD_NAME" value="validateMinesInputTests" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommandProcessorTest.validateSquareSelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.CommandProcessorTest" />
+      <option name="METHOD_NAME" value="validateSquareSelectionTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -133,54 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GridTest.testAdjacentSquares" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GridTest" />
-      <option name="METHOD_NAME" value="testAdjacentSquares" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GridTest.testGenerateGridDimensions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GridTest" />
-      <option name="METHOD_NAME" value="testGenerateGridDimensions" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GridTest.testMinesCount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GridTest" />
-      <option name="METHOD_NAME" value="testMinesCount" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper--GIC-Interview" />
       <method v="2">
@@ -194,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CommandProcessorTest.validateMinesInputTests" />
+        <item itemvalue="JUnit.CommandProcessorTest.validateGridSizeTests" />
+        <item itemvalue="JUnit.CommandProcessorTest.validateSquareSelectionTest" />
+        <item itemvalue="Application.Minesweeper" />
         <item itemvalue="JUnit.GridTest" />
-        <item itemvalue="JUnit.GridTest.testAdjacentSquares" />
-        <item itemvalue="JUnit.GridTest.testMinesCount" />
-        <item itemvalue="JUnit.GridTest.testGenerateGridDimensions" />
-        <item itemvalue="JUnit.CommandProcessorTest.validateInitialInputTests" />
       </list>
     </recent_temporary>
   </component>
@@ -300,7 +296,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758267628604</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="added 2 more tests where all squares are hidden on init and also testing the count of bombs in a square is accurate">
+      <option name="closed" value="true" />
+      <created>1758269157267</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1758269157267</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,6 +321,7 @@
     <MESSAGE value="Added limitation to the application. Since the Y axis is Alphebets, the number of possible size is limited to 26. also if size is less than 3, it unplayable because its just trial and error because all spaces will be 1 or bomb." />
     <MESSAGE value="Added square model. A minefield's field is a square.&#10;It contains revealed, ismine and the count of the surrounding mines." />
     <MESSAGE value="Added GridTests for validating that the mine generated and the dimensions of the grid is correct" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added GridTests for validating that the mine generated and the dimensions of the grid is correct" />
+    <MESSAGE value="added 2 more tests where all squares are hidden on init and also testing the count of bombs in a square is accurate" />
+    <option name="LAST_COMMIT_MESSAGE" value="added 2 more tests where all squares are hidden on init and also testing the count of bombs in a square is accurate" />
   </component>
 </project>

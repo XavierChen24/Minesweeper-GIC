@@ -21,12 +21,14 @@ public class CommandProcessor {
                 System.out.println("Enter the size of the grid (e.g. 4 for a 4x4 grid): ");
                 size = Integer.parseInt(scanner.nextLine());
 
+                validateGridSize(size);
                 System.out.println("Enter the number of mines to place on the grid (maximum is 35% of the total squares): ");
                 minesCount = Integer.parseInt(scanner.nextLine());
+                validateMinesInput(size, minesCount);
 
                 game = new Game(size, minesCount);
 
-                validateInitialInput(size, minesCount);
+
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input detected, please retry.");
                 continue;
@@ -38,8 +40,15 @@ public class CommandProcessor {
         }
     }
 
+    //This function validates the grid dimension user input
+    public void validateGridSize(int size){
+        if (size < 3 || size > 26) {
+            throw new IllegalArgumentException("Minimum size is 3 and maximum size is 26");
+        }
+    }
+
     //This function validates the bomb count and grid dimensions
-    public void validateInitialInput(int size, int mines) {
+    public void validateMinesInput(int size, int mines) {
         if (size <= 0 || mines <= 0) {
             throw new IllegalArgumentException("Only positive non-zero values are accepted");
         }
