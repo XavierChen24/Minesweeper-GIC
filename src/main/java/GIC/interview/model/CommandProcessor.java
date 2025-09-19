@@ -41,12 +41,18 @@ public class CommandProcessor {
                     System.out.print("Select a square to reveal (e.g. A1): ");
                     String selectionInput = scanner.nextLine();
 
+                    validateSquareSelection(size, selectionInput);
+
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
 
         }
     }
 
     //This function validates the grid dimension user input
-    public void validateGridSize(int size){
+    public void validateGridSize(int size) {
         if (size < 3 || size > 26) {
             throw new IllegalArgumentException("Minimum size is 3 and maximum size is 26");
         }
@@ -66,7 +72,20 @@ public class CommandProcessor {
     }
 
     //This function validates the inputs for square selection
-    public void validateSquareSelection(String input) {
+    public SquareSelection validateSquareSelection(int size, String input) {
+        try {
+            //Fetches the first character. Expecting (A-Z)
+            char letter = input.charAt(0);
+            //Fetches the remaining numbers. Expecting (1-26)
+            int number = Integer.parseInt(input.substring(1));
+
+            if (number < 1 || number > Math.min(size, 26) || letter < 'A' || letter >= 'A' + Math.min(size, 26)) {
+                throw new IllegalArgumentException();
+            }
+            return new SquareSelection(number -1, letter - 'A');
+        } catch (Exception e) {
+            throw new IllegalArgumentException("Invalid field selected. Please input a valid square. (e.g. A1)");
+        }
     }
 
 }

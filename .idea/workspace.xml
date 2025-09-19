@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" afterDir="false" />
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="Added print grid function to the overall application">
+      <change afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/SquareSelection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
         <option value="JUnit5 Test Class" />
       </list>
     </option>
@@ -35,12 +33,12 @@
     &quot;assignee&quot;: &quot;XavierChen24&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/XavierChen24/Minesweeper-GIC.git",
-    "accountId": "97601834-a268-49fd-bd3a-f4c9a4b7d6c4"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/XavierChen24/Minesweeper-GIC.git&quot;,
+    &quot;accountId&quot;: &quot;97601834-a268-49fd-bd3a-f4c9a4b7d6c4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -66,6 +64,7 @@
     "JUnit.GridTest.testAdjacentSquares.executor": "Run",
     "JUnit.GridTest.testGenerateGridDimensions.executor": "Run",
     "JUnit.GridTest.testMinesCount.executor": "Run",
+    "JUnit.SquareSelectionTest.SquareSelectionTest.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -107,20 +106,7 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.printGridSizeEquals26">
-    <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CommandProcessorTest.validateSquareSelectionTest">
     <configuration name="CommandProcessorTest.validateSquareSelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
@@ -185,6 +171,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SquareSelectionTest.SquareSelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.SquareSelectionTest" />
+      <option name="METHOD_NAME" value="SquareSelectionTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper--GIC-Interview" />
       <method v="2">
@@ -198,11 +200,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.printGridSizeEquals26" />
         <item itemvalue="JUnit.CommandProcessorTest.validateSquareSelectionTest" />
+        <item itemvalue="JUnit.SquareSelectionTest.SquareSelectionTest" />
+        <item itemvalue="JUnit.GameTest.printGridSizeEquals26" />
         <item itemvalue="JUnit.GameTest.printGrid" />
         <item itemvalue="JUnit.GameTest.testGenerateGridDimensions" />
-        <item itemvalue="Application.Minesweeper" />
       </list>
     </recent_temporary>
   </component>
@@ -223,7 +225,7 @@
       <updated>1758081971850</updated>
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
-      <workItem from="1758274251822" duration="1981000" />
+      <workItem from="1758274251822" duration="6873000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />
@@ -321,7 +323,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758270035523</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added print grid function and tests">
+      <option name="closed" value="true" />
+      <created>1758280407063</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1758280407063</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Added print grid function to the overall application">
+      <option name="closed" value="true" />
+      <created>1758280585836</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1758280585836</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,17 +358,8 @@
     <MESSAGE value="Added GridTests for validating that the mine generated and the dimensions of the grid is correct" />
     <MESSAGE value="added 2 more tests where all squares are hidden on init and also testing the count of bombs in a square is accurate" />
     <MESSAGE value="split the validation for size and mines count for input flow and error handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="split the validation for size and mines count for input flow and error handling" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added print grid function and tests" />
+    <MESSAGE value="Added print grid function to the overall application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added print grid function to the overall application" />
   </component>
 </project>

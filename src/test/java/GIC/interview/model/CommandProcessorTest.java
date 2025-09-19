@@ -105,7 +105,72 @@ class CommandProcessorTest {
         );
     }
 
+    @Test
+    public void validateSquareSelectionTest() {
+        int size = 5;
+        assertAll("Validation scenarios for square selection",
+                () -> {
+                    Assertions.assertDoesNotThrow(() -> {
+                        commandProcessor.validateSquareSelection(size, "E1");
+                    }, "E1 in a grid size 5 should be a valid grid selection");
+                },
+                () -> {
+                    Assertions.assertDoesNotThrow(() -> {
+                        commandProcessor.validateSquareSelection(size, "A1");
+                    }, "A1 in a grid size 5 should be a valid grid selection");
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "F1");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "F!");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "!F");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "1F");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "!!");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+                        commandProcessor.validateSquareSelection(size, "1F");
+                    });
+                    assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
+                },
+                () -> {
+                    SquareSelection input = commandProcessor.validateSquareSelection(size, "A1");
 
+                    assertEquals(0, input.getX());
+                    assertEquals(0, input.getY());
+
+                },
+                () -> {
+                    SquareSelection input = commandProcessor.validateSquareSelection(size, "B2");
+
+                    assertEquals(1, input.getX());
+                    assertEquals(1, input.getY());
+
+                }
+        );
+    }
 
 
 }
