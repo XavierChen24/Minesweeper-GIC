@@ -27,7 +27,7 @@ public class CommandProcessor {
                 validateMinesInput(size, minesCount);
 
                 game = new Game(size, minesCount);
-
+                System.out.println("\nHere is your minefield:");
 
             } catch (NumberFormatException e) {
                 System.out.println("Invalid input detected, please retry.");
@@ -35,6 +35,11 @@ public class CommandProcessor {
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
+            while (game.getGameStatus() == GameStatus.CONTINUE) {
+                try {
+                    game.printGrid();
+                    System.out.print("Select a square to reveal (e.g. A1): ");
+                    String selectionInput = scanner.nextLine();
 
 
         }

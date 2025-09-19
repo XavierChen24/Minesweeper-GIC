@@ -70,4 +70,8 @@ public class Grid {
     public Square[][] getSquares() {
         return squares;
     }
+
+    public int getSize() {
+        return size;
+    }
 }

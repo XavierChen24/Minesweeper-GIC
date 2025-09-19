@@ -44,5 +44,7 @@ public class Game {
     //Checks if the game has been won/lost/continue
     public void processResults(){}
 
-    //
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
 }
