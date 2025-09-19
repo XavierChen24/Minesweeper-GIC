@@ -10,7 +10,15 @@ public class CommandProcessor {
         this.scanner = new Scanner(System.in);
     }
 
+    //This function takes in user inputs
     public void processInputs(){
 
     }
+
+    //This function validates the bomb count and grid dimensions
+    public void validateInitialInput(){}
+
+    //This function validates the inputs for square selection
+    public void validateSquareSelection(){}
+
 }
