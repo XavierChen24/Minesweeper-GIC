@@ -24,10 +24,17 @@ public class CommandProcessor {
                 System.out.println("Enter the number of mines to place on the grid (maximum is 35% of the total squares): ");
                 minesCount = Integer.parseInt(scanner.nextLine());
 
+                game = new Game(size, minesCount);
+
                 validateInitialInput(size, minesCount);
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input detected, please retry.");
+                continue;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
             }
+
+
         }
     }
 
@@ -45,7 +52,7 @@ public class CommandProcessor {
     }
 
     //This function validates the inputs for square selection
-    public void validateSquareSelection() {
+    public void validateSquareSelection(String input) {
     }
 
 }
