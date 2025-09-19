@@ -23,13 +23,25 @@ public class CommandProcessor {
 
                 System.out.println("Enter the number of mines to place on the grid (maximum is 35% of the total squares): ");
                 minesCount = Integer.parseInt(scanner.nextLine());
-            }catch
+
+                validateInitialInput(size, minesCount);
+            } catch (IllegalArgumentException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 
     //This function validates the bomb count and grid dimensions
     public void validateInitialInput(int size, int mines) {
-
+        if (size <= 0 || mines <= 0) {
+            throw new IllegalArgumentException("Only positive non-zero values are accepted");
+        }
+        if (size < 3) {
+            throw new IllegalArgumentException("Minimum size is 3");
+        }
+        if (mines > Math.floor(size * size * 0.35)) {
+            throw new IllegalArgumentException("Maximum mines is 35% of the total squares");
+        }
     }
 
     //This function validates the inputs for square selection

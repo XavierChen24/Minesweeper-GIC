@@ -72,11 +72,11 @@ class CommandProcessorTest {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateInitialInput(10, 36);
                     });
-                    assertEquals("Maximum is 35% of the total squares", exception.getMessage());
+                    assertEquals("Maximum mines is 35% of the total squares", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-                        commandProcessor.validateInitialInput(3, 36);
+                        commandProcessor.validateInitialInput(2, 36);
                     });
                     assertEquals("Minimum size is 3", exception.getMessage());
                 }
