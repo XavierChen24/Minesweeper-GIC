@@ -43,6 +43,7 @@ public class CommandProcessor {
 
                     SquareSelection selectedSquare = validateSquareSelection(size, selectionInput);
 
+                    game.playGame(selectedSquare);
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
                 }
@@ -82,7 +83,7 @@ public class CommandProcessor {
             if (number < 1 || number > Math.min(size, 26) || letter < 'A' || letter >= 'A' + Math.min(size, 26)) {
                 throw new IllegalArgumentException();
             }
-            return new SquareSelection(number -1, letter - 'A');
+            return new SquareSelection(number - 1, letter - 'A');
         } catch (Exception e) {
             throw new IllegalArgumentException("Invalid field selected. Please input a valid square. (e.g. A1)");
         }
