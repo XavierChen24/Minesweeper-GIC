@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="Added remaining CommandProcessor checks for correct flow of flow.">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/SquareSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/SquareSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +22,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -61,7 +60,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Minesweeper.executor": "Run",
+    "Application.Minesweeper.executor": "Debug",
+    "Docker.Dockerfile.executor": "Run",
+    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
     "JUnit.CommandProcessorTest.executor": "Run",
     "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
     "JUnit.CommandProcessorTest.validateGridSizeTests.executor": "Run",
@@ -96,7 +97,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "play-game-function",
+    "git-widget-placeholder": "main",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/xavier/Desktop/Repos/interviews/Minesweeper--GIC-Interview-main",
@@ -176,37 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.printGridSizeEquals5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="printGridSizeEquals5" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GridTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GridTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper--GIC-Interview" />
       <method v="2">
@@ -218,13 +188,37 @@
       <option name="filePath" />
       <method v="2" />
     </configuration>
+    <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Minesweeper" />
         <item itemvalue="JUnit.GameTest" />
-        <item itemvalue="JUnit.GameTest.printGridSizeEquals5" />
-        <item itemvalue="JUnit.GridTest" />
         <item itemvalue="JUnit.CommandProcessorTest" />
+        <item itemvalue="Docker.Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
       </list>
     </recent_temporary>
   </component>
@@ -432,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758363053964</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Cleaned up UI when the numbers dont align with the grid">
+      <option name="closed" value="true" />
+      <created>1758371147507</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1758371147507</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -462,7 +464,8 @@
     <MESSAGE value="missed flood fill test cases in previous commits." />
     <MESSAGE value="added function and test cases for testPlayGame" />
     <MESSAGE value="Added remaining CommandProcessor checks for correct flow of flow." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added remaining CommandProcessor checks for correct flow of flow." />
+    <MESSAGE value="Cleaned up UI when the numbers dont align with the grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up UI when the numbers dont align with the grid" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -479,7 +482,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java</url>
-          <line>52</line>
+          <line>59</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
       </breakpoints>
