@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added function and test cases for testPlayGame">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="Added remaining CommandProcessor checks for correct flow of flow.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/SquareSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/SquareSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/CommandProcessorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +47,9 @@
     &quot;accountId&quot;: &quot;97601834-a268-49fd-bd3a-f4c9a4b7d6c4&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -55,7 +61,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Minesweeper.executor": "Debug",
+    "Application.Minesweeper.executor": "Run",
     "JUnit.CommandProcessorTest.executor": "Run",
     "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
     "JUnit.CommandProcessorTest.validateGridSizeTests.executor": "Run",
@@ -71,6 +77,7 @@
     "JUnit.GameTest.isInBounds.executor": "Run",
     "JUnit.GameTest.printGrid.executor": "Run",
     "JUnit.GameTest.printGridSizeEquals26.executor": "Run",
+    "JUnit.GameTest.printGridSizeEquals5.executor": "Run",
     "JUnit.GameTest.testGenerateGridDimensions.executor": "Debug",
     "JUnit.GameTest.testPlayGame.executor": "Run",
     "JUnit.GameTest.testPlayGame_error.executor": "Debug",
@@ -78,7 +85,7 @@
     "JUnit.GameTest.testPlayGame_postiveFlow.executor": "Run",
     "JUnit.GameTest.testPlayGame_win1.executor": "Run",
     "JUnit.GameTest.testPlayGame_win2.executor": "Run",
-    "JUnit.GridTest.executor": "Run",
+    "JUnit.GridTest.executor": "Debug",
     "JUnit.GridTest.testAdjacentSquares.executor": "Run",
     "JUnit.GridTest.testGenerateGridDimensions.executor": "Run",
     "JUnit.GridTest.testMinesCount.executor": "Run",
@@ -101,6 +108,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
@@ -124,7 +132,7 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GridTest">
+  <component name="RunManager" selected="Application.Minesweeper">
     <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
       <module name="test" />
@@ -168,7 +176,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.testPlayGame_error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.printGridSizeEquals5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -178,7 +186,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="testPlayGame_error" />
+      <option name="METHOD_NAME" value="printGridSizeEquals5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,11 +220,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GridTest" />
-        <item itemvalue="JUnit.GameTest" />
-        <item itemvalue="JUnit.CommandProcessorTest" />
         <item itemvalue="Application.Minesweeper" />
-        <item itemvalue="JUnit.GameTest.testPlayGame_error" />
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.printGridSizeEquals5" />
+        <item itemvalue="JUnit.GridTest" />
+        <item itemvalue="JUnit.CommandProcessorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +246,7 @@
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
       <workItem from="1758274251822" duration="11011000" />
-      <workItem from="1758295204257" duration="21055000" />
+      <workItem from="1758295204257" duration="22284000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />
@@ -416,7 +424,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758354887501</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Added remaining CommandProcessor checks for correct flow of flow.">
+      <option name="closed" value="true" />
+      <created>1758363053964</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1758363053964</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,19 +461,20 @@
     <MESSAGE value="added floodfill function test, added isInboundsFunction and floodFillTest" />
     <MESSAGE value="missed flood fill test cases in previous commits." />
     <MESSAGE value="added function and test cases for testPlayGame" />
-    <option name="LAST_COMMIT_MESSAGE" value="added function and test cases for testPlayGame" />
+    <MESSAGE value="Added remaining CommandProcessor checks for correct flow of flow." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added remaining CommandProcessor checks for correct flow of flow." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
-          <line>88</line>
+          <line>92</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java</url>
-          <line>40</line>
+          <line>35</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">

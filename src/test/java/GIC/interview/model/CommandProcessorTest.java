@@ -1,14 +1,6 @@
 package GIC.interview.model;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-
-import java.io.PrintStream;
-import java.net.CookieManager;
-import java.util.Scanner;
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

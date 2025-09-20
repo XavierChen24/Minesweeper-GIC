@@ -27,12 +27,14 @@ class GameTest {
         System.setOut(originalOut);
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 5 \n" +
-                "A - - - - -\n" +
-                "B - - - - -\n" +
-                "C - - - - -\n" +
-                "D - - - - -\n" +
-                "E - - - - -\n";
+        String expectedOutput = """
+                  1 2 3 4 5\s
+                A - - - - -
+                B - - - - -
+                C - - - - -
+                D - - - - -
+                E - - - - -
+                """;
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -53,33 +55,35 @@ class GameTest {
         System.setOut(originalOut);
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 \n" +
-                "A - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "B - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "C - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "D - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "E - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "F - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "G - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "H - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "I - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "J - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "K - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "L - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "M - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "N - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "O - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "P - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "Q - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "R - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "S - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "T - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "U - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "V - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "W - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "X - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "Y - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
-                "Z - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+        String expectedOutput = """
+                  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26\s
+                A - - - - - - - - - - - - - - - - - - - - - - - - - -
+                B - - - - - - - - - - - - - - - - - - - - - - - - - -
+                C - - - - - - - - - - - - - - - - - - - - - - - - - -
+                D - - - - - - - - - - - - - - - - - - - - - - - - - -
+                E - - - - - - - - - - - - - - - - - - - - - - - - - -
+                F - - - - - - - - - - - - - - - - - - - - - - - - - -
+                G - - - - - - - - - - - - - - - - - - - - - - - - - -
+                H - - - - - - - - - - - - - - - - - - - - - - - - - -
+                I - - - - - - - - - - - - - - - - - - - - - - - - - -
+                J - - - - - - - - - - - - - - - - - - - - - - - - - -
+                K - - - - - - - - - - - - - - - - - - - - - - - - - -
+                L - - - - - - - - - - - - - - - - - - - - - - - - - -
+                M - - - - - - - - - - - - - - - - - - - - - - - - - -
+                N - - - - - - - - - - - - - - - - - - - - - - - - - -
+                O - - - - - - - - - - - - - - - - - - - - - - - - - -
+                P - - - - - - - - - - - - - - - - - - - - - - - - - -
+                Q - - - - - - - - - - - - - - - - - - - - - - - - - -
+                R - - - - - - - - - - - - - - - - - - - - - - - - - -
+                S - - - - - - - - - - - - - - - - - - - - - - - - - -
+                T - - - - - - - - - - - - - - - - - - - - - - - - - -
+                U - - - - - - - - - - - - - - - - - - - - - - - - - -
+                V - - - - - - - - - - - - - - - - - - - - - - - - - -
+                W - - - - - - - - - - - - - - - - - - - - - - - - - -
+                X - - - - - - - - - - - - - - - - - - - - - - - - - -
+                Y - - - - - - - - - - - - - - - - - - - - - - - - - -
+                Z - - - - - - - - - - - - - - - - - - - - - - - - - -
+                """;
         assertEquals(expectedOutput, outContent.toString());
     }
 
@@ -109,11 +113,13 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D - 1 0 0\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D - 1 0 0
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "All fields should be revealed except 2 squares.");
         assertEquals(1, nonRandomGrid.getSpacesLeft(), "Expected 1 space left and 1 mine left.");
     }
@@ -144,11 +150,13 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A - - - -\n" +
-                "B - - - -\n" +
-                "C - - - -\n" +
-                "D 1 - - -\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A - - - -
+                B - - - -
+                C - - - -
+                D 1 - - -
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "All fields should be hidden except 1");
         assertEquals(14, nonRandomGrid.getSpacesLeft(), "Expected 14 space left and 1 mine left.");
     }
@@ -181,18 +189,20 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A - - - -\n" +
-                "B - - - -\n" +
-                "C - - - -\n" +
-                "D - - - -\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A - - - -
+                B - - - -
+                C - - - -
+                D - - - -
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "All fields should not be revealed or changed");
         assertEquals(15, nonRandomGrid.getSpacesLeft(), "Expected all fields to be closed and 1 mine. Thus its 4X4-1");
     }
 
     @Test
     void floodFillTest_negativeFlow2() {
-        //Floodfill should do nothing when it hit an already revealed square
+        //Flood fill should do nothing when it hit an already revealed square
         int size = 4;
         int minesCount = 1;
         Random notRandom = new Random(1);
@@ -220,11 +230,13 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A - - - -\n" +
-                "B 1 - - -\n" +
-                "C - - - -\n" +
-                "D - - - -\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A - - - -
+                B 1 - - -
+                C - - - -
+                D - - - -
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "All fields should not be revealed or changed");
         assertEquals(14, nonRandomGrid.getSpacesLeft(), "Expected all fields to be closed and 1 mine. Thus its 4X4-1");
     }
@@ -261,7 +273,7 @@ class GameTest {
     }
 
     @Test
-    void isInBoundsTest() throws NoSuchMethodException {
+    void isInBoundsTest() {
         int size = 4;
         int minesCount = 1;
 
@@ -299,14 +311,16 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D - 1 0 0\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D - 1 0 0
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
         assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
-        assertEquals(newGame.getGameStatus(), GameStatus.CONTINUE, "One square is unrevealed, thus the game status should be to continue");
+        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status should be to continue");
 
 
         //Player selects the last field that is a square
@@ -318,15 +332,17 @@ class GameTest {
         System.out.println("Current unrevealed grid is below");
         newGame.printGrid();
 
-        expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D 1 1 0 0\n";
+        expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D 1 1 0 0
+                """;
 
         assertEquals(expectedOutput, captureAssert(newGame), "all 15 Cells should be revealed.");
         assertEquals(0, nonRandomGrid.getSpacesLeft(), "There should be no more squares left");
-        assertEquals(newGame.getGameStatus(), GameStatus.WIN, "All cells are opened, the game should be considered won");
+        assertEquals(GameStatus.WIN, newGame.getGameStatus(), "All cells are opened, the game should be considered won");
     }
 
     @Test
@@ -356,14 +372,16 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D - 1 0 0\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D - 1 0 0
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
         assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
-        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status shoudl be to continue");
+        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status should be to continue");
 
 
         //Player selects the last field that is a square
@@ -375,11 +393,13 @@ class GameTest {
         System.out.println("Current unrevealed grid is below");
         newGame.printGrid();
 
-        expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D - 1 0 0\n";
+        expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D - 1 0 0
+                """;
 
         assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
         assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
@@ -413,17 +433,19 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 5 6 7 8 9 10 \n" +
-                "A 0 0 0 0 0 0 0 0 0 0\n" +
-                "B 0 0 0 0 0 0 0 0 0 0\n" +
-                "C 0 0 0 0 0 0 0 0 0 0\n" +
-                "D 1 1 0 0 0 0 0 0 0 0\n" +
-                "E - 1 0 0 0 0 0 0 0 0\n" +
-                "F 1 1 0 0 0 0 0 0 0 0\n" +
-                "G 0 0 0 0 0 0 0 0 0 0\n" +
-                "H 0 0 0 0 0 0 0 0 0 0\n" +
-                "I 0 0 0 0 0 0 0 0 0 0\n" +
-                "J 0 0 0 0 0 0 0 0 0 0\n";
+        String expectedOutput = """
+                  1 2 3 4 5 6 7 8 9 10\s
+                A 0 0 0 0 0 0 0 0 0 0
+                B 0 0 0 0 0 0 0 0 0 0
+                C 0 0 0 0 0 0 0 0 0 0
+                D 1 1 0 0 0 0 0 0 0 0
+                E - 1 0 0 0 0 0 0 0 0
+                F 1 1 0 0 0 0 0 0 0 0
+                G 0 0 0 0 0 0 0 0 0 0
+                H 0 0 0 0 0 0 0 0 0 0
+                I 0 0 0 0 0 0 0 0 0 0
+                J 0 0 0 0 0 0 0 0 0 0
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
         assertEquals(0, nonRandomGrid.getSpacesLeft(), "All squares should be revealed.");
         assertEquals(GameStatus.WIN, newGame.getGameStatus(), "All cells are opened, the game should be considered won");
@@ -457,14 +479,16 @@ class GameTest {
         newGame.printGrid();
 
         // Assert: Compare output
-        String expectedOutput = "  1 2 3 4 \n" +
-                "A 0 0 0 0\n" +
-                "B 1 1 0 0\n" +
-                "C - 1 0 0\n" +
-                "D - 1 0 0\n";
+        String expectedOutput = """
+                  1 2 3 4\s
+                A 0 0 0 0
+                B 1 1 0 0
+                C - 1 0 0
+                D - 1 0 0
+                """;
         assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
         assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
-        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status shoudl be to continue");
+        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status should be to continue");
 
 
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
@@ -472,7 +496,7 @@ class GameTest {
             //Player selects the last field that is a square
             newGame.playGame(new SquareSelection(0, 0));
 
-        },"Square selection for a already revealed square should throw error");
+        }, "Square selection for a already revealed square should throw error");
         assertEquals("Square has been previously selected", exception.getMessage());
     }
 }
