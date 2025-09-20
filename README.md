@@ -36,5 +36,36 @@ mvn clean package && java -jar target/app-1.0-SNAPSHOT.jar
 ## Environment requirements:
 1. Minesweeper should be able to run on any operating system with Docker or Maven
 
+## File Structure
+```
+.
+├── Dockerfile                                          # Docker build configuration
+├── LICENSE                                             # Project license
+├── Minesweeper Class Diagram V1.2.pdf                  # UML or class diagram (PDF)
+├── pom.xml                                             # Maven project configuration
+├── README.md                                           # Project documentation
+├── src
+│   ├── main
+│   │   ├── java
+│   │   │   └── GIC.interview
+│   │   │       ├── Minesweeper.java                   # Main application class
+│   │   │       └── model
+│   │   │           ├── CommandProcessor.java          # Handles user commands
+│   │   │           ├── Game.java                      # Game engine logic
+│   │   │           ├── GameStatus.java                # Enum or class for game state
+│   │   │           ├── Grid.java                      # Represents the minefield grid
+│   │   │           ├── Square.java                    # Single cell in the grid
+│   │   │           └── SquareSelection.java           # User selection handler
+│   │   └── resources                                   # (empty or used for configs)
+│
+│   └── test
+│       └── java
+│           └── GIC.interview.model
+│               ├── CommandProcessorTest.java          # Unit tests for command processing
+│               ├── GameTest.java                      # Unit tests for game logic
+│               └── GridTest.java                      # Unit tests for grid behavior
+
+```
+
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
