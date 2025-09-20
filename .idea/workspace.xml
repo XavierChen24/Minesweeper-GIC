@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added floodfill function, added isInboundsFunction and test">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="missed flood fill test cases in previous commits.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
@@ -73,6 +73,11 @@
     "JUnit.GameTest.printGridSizeEquals26.executor": "Run",
     "JUnit.GameTest.testGenerateGridDimensions.executor": "Debug",
     "JUnit.GameTest.testPlayGame.executor": "Run",
+    "JUnit.GameTest.testPlayGame_error.executor": "Run",
+    "JUnit.GameTest.testPlayGame_lose1.executor": "Run",
+    "JUnit.GameTest.testPlayGame_postiveFlow.executor": "Run",
+    "JUnit.GameTest.testPlayGame_win1.executor": "Run",
+    "JUnit.GameTest.testPlayGame_win2.executor": "Run",
     "JUnit.GridTest.executor": "Run",
     "JUnit.GridTest.testAdjacentSquares.executor": "Run",
     "JUnit.GridTest.testGenerateGridDimensions.executor": "Run",
@@ -119,23 +124,21 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.floodFillTest_negativeFlow2">
-    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Minesweeper">
+    <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
       <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="PATTERN" value="GIC.interview.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.floodFillTest_negativeFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testPlayGame_error" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -145,13 +148,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="floodFillTest_negativeFlow" />
+      <option name="METHOD_NAME" value="testPlayGame_error" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.floodFillTest_negativeFlow2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testPlayGame_lose1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -161,13 +164,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="floodFillTest_negativeFlow2" />
+      <option name="METHOD_NAME" value="testPlayGame_lose1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.floodFillTest_positiveFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testPlayGame_win1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -177,13 +180,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="floodFillTest_positiveFlow" />
+      <option name="METHOD_NAME" value="testPlayGame_win1" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.floodFillTest_positiveFlow2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.testPlayGame_win2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -193,7 +196,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="floodFillTest_positiveFlow2" />
+      <option name="METHOD_NAME" value="testPlayGame_win2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -212,11 +215,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.floodFillTest_negativeFlow2" />
-        <item itemvalue="JUnit.GameTest" />
-        <item itemvalue="JUnit.GameTest.floodFillTest_negativeFlow" />
-        <item itemvalue="JUnit.GameTest.floodFillTest_positiveFlow2" />
-        <item itemvalue="JUnit.GameTest.floodFillTest_positiveFlow" />
+        <item itemvalue="Application.Minesweeper" />
+        <item itemvalue="JUnit.GameTest.testPlayGame_error" />
+        <item itemvalue="JUnit.GameTest.testPlayGame_win2" />
+        <item itemvalue="JUnit.GameTest.testPlayGame_win1" />
+        <item itemvalue="JUnit.GameTest.testPlayGame_lose1" />
       </list>
     </recent_temporary>
   </component>
@@ -238,7 +241,7 @@
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
       <workItem from="1758274251822" duration="11011000" />
-      <workItem from="1758295204257" duration="10356000" />
+      <workItem from="1758295204257" duration="14432000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />
@@ -392,7 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758340923691</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added floodfill function test, added isInboundsFunction and floodFillTest">
+      <option name="closed" value="true" />
+      <created>1758348424549</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1758348424549</updated>
+    </task>
+    <task id="LOCAL-00021" summary="missed flood fill test cases in previous commits.">
+      <option name="closed" value="true" />
+      <created>1758348768665</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1758348768665</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,20 +437,22 @@
     <MESSAGE value="added play game test function. partial commit because missing the reveal function in the minesweeper." />
     <MESSAGE value="improved on the error test cases in validateSquareSelection" />
     <MESSAGE value="added floodfill function, added isInboundsFunction and test" />
-    <option name="LAST_COMMIT_MESSAGE" value="added floodfill function, added isInboundsFunction and test" />
+    <MESSAGE value="added floodfill function test, added isInboundsFunction and floodFillTest" />
+    <MESSAGE value="missed flood fill test cases in previous commits." />
+    <option name="LAST_COMMIT_MESSAGE" value="missed flood fill test cases in previous commits." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
-          <line>179</line>
-          <option name="timeStamp" value="4" />
+          <line>88</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
-          <line>108</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java</url>
+          <line>63</line>
+          <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
