@@ -274,7 +274,8 @@ class GameTest {
     }
 
     @Test
-    void testPlayGame() {
+    void testPlayGame_win1() {
+        //The following is a full game with flood fill with 2 inputs.
         int size = 4;
         int minesCount = 1;
         Random notRandom = new Random(1);
@@ -283,11 +284,195 @@ class GameTest {
         Game newGame = new Game(size, minesCount);
 
         newGame.setGrid(nonRandomGrid);
+        //Display the hidden board for debugging purposes
+        printRevealedGrid(nonRandomGrid);
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
         newGame.printGrid();
 
+        //Player selects the field that should be flood filled.
         newGame.playGame(new SquareSelection(0, 0));
-
+        System.out.println("Selected A1");
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
         newGame.printGrid();
 
+        // Assert: Compare output
+        String expectedOutput = "  1 2 3 4 \n" +
+                "A 0 0 0 0\n" +
+                "B 1 1 0 0\n" +
+                "C - 1 0 0\n" +
+                "D - 1 0 0\n";
+        assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
+        assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
+        assertEquals(newGame.getGameStatus(), GameStatus.CONTINUE, "One square is unrevealed, thus the game status should be to continue");
+
+
+        //Player selects the last field that is a square
+        newGame.playGame(new SquareSelection(0, 3));
+        System.out.println("Selected D1");
+        // Assert: Compare output
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        expectedOutput = "  1 2 3 4 \n" +
+                "A 0 0 0 0\n" +
+                "B 1 1 0 0\n" +
+                "C - 1 0 0\n" +
+                "D 1 1 0 0\n";
+
+        assertEquals(expectedOutput, captureAssert(newGame), "all 15 Cells should be revealed.");
+        assertEquals(0, nonRandomGrid.getSpacesLeft(), "There should be no more squares left");
+        assertEquals(newGame.getGameStatus(), GameStatus.WIN, "All cells are opened, the game should be considered won");
+    }
+
+    @Test
+    void testPlayGame_lose1() {
+        //The following is a full game with flood fill with 2 inputs, on the 2nd input, click a bomb.
+        int size = 4;
+        int minesCount = 1;
+        Random notRandom = new Random(1);
+
+        Grid nonRandomGrid = new Grid(size, minesCount, notRandom);
+        Game newGame = new Game(size, minesCount);
+
+        newGame.setGrid(nonRandomGrid);
+        //Display the hidden board for debugging purposes
+        printRevealedGrid(nonRandomGrid);
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        //Player selects the field that should be flood filled.
+        newGame.playGame(new SquareSelection(0, 0));
+        System.out.println("Selected A1");
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        // Assert: Compare output
+        String expectedOutput = "  1 2 3 4 \n" +
+                "A 0 0 0 0\n" +
+                "B 1 1 0 0\n" +
+                "C - 1 0 0\n" +
+                "D - 1 0 0\n";
+        assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
+        assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
+        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status shoudl be to continue");
+
+
+        //Player selects the last field that is a square
+        newGame.playGame(new SquareSelection(0, 2));
+        System.out.println("Selected C1");
+        // Assert: Compare output
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        expectedOutput = "  1 2 3 4 \n" +
+                "A 0 0 0 0\n" +
+                "B 1 1 0 0\n" +
+                "C - 1 0 0\n" +
+                "D - 1 0 0\n";
+
+        assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
+        assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
+        assertEquals(GameStatus.LOSE, newGame.getGameStatus(), "All cells are opened, the game should be considered won");
+    }
+
+    @Test
+    void testPlayGame_win2() {
+        //When the user selects one square, and it flood fills all the squares
+        int size = 10;
+        int minesCount = 1;
+        Random notRandom = new Random(3);
+
+        Grid nonRandomGrid = new Grid(size, minesCount, notRandom);
+        Game newGame = new Game(size, minesCount);
+
+        newGame.setGrid(nonRandomGrid);
+        //Display the hidden board for debugging purposes
+        printRevealedGrid(nonRandomGrid);
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        //Player selects the field that should be flood filled.
+        newGame.playGame(new SquareSelection(0, 0));
+        System.out.println("Selected A1");
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        // Assert: Compare output
+        String expectedOutput = "  1 2 3 4 5 6 7 8 9 10 \n" +
+                "A 0 0 0 0 0 0 0 0 0 0\n" +
+                "B 0 0 0 0 0 0 0 0 0 0\n" +
+                "C 0 0 0 0 0 0 0 0 0 0\n" +
+                "D 1 1 0 0 0 0 0 0 0 0\n" +
+                "E - 1 0 0 0 0 0 0 0 0\n" +
+                "F 1 1 0 0 0 0 0 0 0 0\n" +
+                "G 0 0 0 0 0 0 0 0 0 0\n" +
+                "H 0 0 0 0 0 0 0 0 0 0\n" +
+                "I 0 0 0 0 0 0 0 0 0 0\n" +
+                "J 0 0 0 0 0 0 0 0 0 0\n";
+        assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
+        assertEquals(0, nonRandomGrid.getSpacesLeft(), "All squares should be revealed.");
+        assertEquals(GameStatus.WIN, newGame.getGameStatus(), "All cells are opened, the game should be considered won");
+
+    }
+
+    @Test
+    void testPlayGame_error() {
+        //When the user selects a previously selected square, it should throw an error.
+        int size = 4;
+        int minesCount = 1;
+        Random notRandom = new Random(1);
+
+        Grid nonRandomGrid = new Grid(size, minesCount, notRandom);
+        Game newGame = new Game(size, minesCount);
+
+        newGame.setGrid(nonRandomGrid);
+        //Display the hidden board for debugging purposes
+        printRevealedGrid(nonRandomGrid);
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        //Player selects the field that should be flood filled.
+        newGame.playGame(new SquareSelection(0, 0));
+        System.out.println("Selected A1");
+
+        //Displays the entire hidden grid.
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        // Assert: Compare output
+        String expectedOutput = "  1 2 3 4 \n" +
+                "A 0 0 0 0\n" +
+                "B 1 1 0 0\n" +
+                "C - 1 0 0\n" +
+                "D - 1 0 0\n";
+        assertEquals(expectedOutput, captureAssert(newGame), "14 cells should be revealed leaving one bomb and one hidden");
+        assertEquals(1, nonRandomGrid.getSpacesLeft(), "Should leave one unrevealed square");
+        assertEquals(GameStatus.CONTINUE, newGame.getGameStatus(), "One square is unrevealed, thus the game status shoudl be to continue");
+
+
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            System.out.println("Selected A1");
+            //Player selects the last field that is a square
+            newGame.playGame(new SquareSelection(0, 0));
+
+        },"Square selection for a already revealed square should throw error");
+        assertEquals("Square has been previously selected", exception.getMessage());
     }
 }

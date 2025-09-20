@@ -17,7 +17,7 @@ public class Grid {
     }
 
     public Square[][] generateGrid(int size, int mines, Random random) {
-        //Create a the minefield grid
+        //Create a minefield grid
         Square[][] newGrid = new Square[size][size];
 
         //Initialize with empty fields

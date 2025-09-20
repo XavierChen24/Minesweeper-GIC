@@ -42,15 +42,43 @@ public class Game {
         System.out.print(sb);
     }
 
-    //Checks if the game has been won/lost/continue
-    public void processResults(){}
+
 
     public GameStatus getGameStatus() {
         return gameStatus;
     }
 
     public void playGame(SquareSelection selectedSquare) {
+        if (gameStatus != GameStatus.CONTINUE) {
+            throw new IllegalStateException("Game has concluded");
+        }
 
+        int x = selectedSquare.getX();
+        int y = selectedSquare.getY();
+
+        Square square = grid.getSquares()[y][x];
+
+        if (square.getIsMine()) {
+            //If the square is a mine, game is lost
+            gameStatus = GameStatus.LOSE;
+        } else if (square.isRevealed()) {
+            //if the square is already revealed, throw an error to get the user to resubmit a choice
+            throw new IllegalArgumentException("Square has been previously selected");
+        } else {
+            //positive case for a selected square.
+            if (square.getAdjacentMines() == 0) {
+                floodFill(x, y);
+            } else {
+                square.reveal();
+                grid.reduceSpacesLeft(1);
+                int minesCount = square.getAdjacentMines();
+                System.out.println("This square contains " + minesCount + " adjacent mine(s)");
+            }
+
+            if (grid.getSpacesLeft() == 0) {
+                gameStatus = GameStatus.WIN;
+            }
+        }
     }
 
     public void setGrid(Grid grid) {
@@ -72,7 +100,7 @@ public class Game {
             for (int dr = -1; dr <= 1; dr++) {
                 for (int dc = -1; dc <= 1; dc++) {
                     // Skip the current cell
-                    if (dr == 0 && dc == 0){
+                    if (dr == 0 && dc == 0) {
                         continue;
                     }
                     floodFill(row + dr, col + dc);
