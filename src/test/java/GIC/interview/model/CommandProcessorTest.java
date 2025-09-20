@@ -122,37 +122,37 @@ class CommandProcessorTest {
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateSquareSelection(size, "F1");
-                    });
+                    }, "Should throw an error when the input is outside of the specified size");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateSquareSelection(size, "F!");
-                    });
+                    }, "Should not allow non alphanumeric inputs.");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateSquareSelection(size, "!F");
-                    });
+                    }, "Should not allow non alphanumeric inputs.");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateSquareSelection(size, "1F");
-                    });
+                    }, "Should throw an error when the input is outside of the specified size");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
                         commandProcessor.validateSquareSelection(size, "!!");
-                    });
+                    },"Should not allow non alphanumeric inputs.");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
                     IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-                        commandProcessor.validateSquareSelection(size, "1F");
-                    });
+                        commandProcessor.validateSquareSelection(size, "1.1F");
+                    },"Decimal numbers should throw an error too");
                     assertEquals("Invalid field selected. Please input a valid square. (e.g. A1)", exception.getMessage());
                 },
                 () -> {
