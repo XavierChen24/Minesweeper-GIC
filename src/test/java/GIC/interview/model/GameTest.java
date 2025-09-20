@@ -4,13 +4,14 @@ import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.Random;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class GameTest {
 
     @Test
-    void printGridSizeEquals5(){
+    void printGridSizeEquals5() {
         int size = 5;
         int minesCount = 5;
         // Arrange: Set up a stream to capture output
@@ -36,7 +37,7 @@ class GameTest {
     }
 
     @Test
-    void printGridSizeEquals26(){
+    void printGridSizeEquals26() {
         int size = 26;
         int minesCount = 5;
         // Arrange: Set up a stream to capture output
@@ -80,5 +81,24 @@ class GameTest {
                 "Y - - - - - - - - - - - - - - - - - - - - - - - - - -\n" +
                 "Z - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
         assertEquals(expectedOutput, outContent.toString());
+    }
+
+
+    @Test
+    void testPlayGame() {
+        int size = 4;
+        int minesCount = 1;
+        Random notRandom = new Random(1);
+
+        Grid nonRandomGrid = new Grid(size, minesCount, notRandom);
+        Game newGame = new Game(size, minesCount);
+
+        newGame.setGrid(nonRandomGrid);
+        newGame.printGrid();
+
+        newGame.playGame(new SquareSelection(0,0));
+
+        newGame.printGrid();
+
     }
 }

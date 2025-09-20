@@ -47,4 +47,14 @@ public class Game {
     public GameStatus getGameStatus() {
         return gameStatus;
     }
+
+    public void playGame(SquareSelection selectedSquare) {
+
+    }
+
+    public void setGrid(Grid grid) {
+        this.grid = grid;
+    }
+
+
 }
