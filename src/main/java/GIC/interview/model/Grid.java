@@ -3,16 +3,14 @@ package GIC.interview.model;
 import java.util.Random;
 
 public class Grid {
-    private Square[][] squares;
-    private int size;
+    private final Square[][] squares;
+    private final int size;
 
     private int spacesLeft;
-    private int mines;
 
     public Grid(int size, int minesCount, Random random) {
         this.squares = generateGrid(size, minesCount, random);
         this.size = size;
-        this.mines = minesCount;
         this.spacesLeft = size * size - minesCount;
     }
 

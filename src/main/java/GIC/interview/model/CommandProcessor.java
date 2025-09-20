@@ -4,16 +4,10 @@ import java.util.Scanner;
 
 public class CommandProcessor {
     private Game game;
-    private final Scanner scanner;
-
-    public CommandProcessor() {
-        this.scanner = new Scanner(System.in);
-    }
-
     //This function takes in user inputs
     public void processInputs() {
-        int size = 0;
-        int minesCount = 0;
+        int size;
+        int minesCount;
         System.out.println("Welcome to Minesweeper!");
         Scanner scanner = new Scanner(System.in);
         while (true) {

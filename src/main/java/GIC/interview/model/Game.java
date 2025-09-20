@@ -79,10 +79,6 @@ public class Game {
         this.grid = grid;
     }
 
-    public Grid getGrid() {
-        return this.grid;
-    }
-
     //When the user selects a 0, the surrounding should open up till it reaches a non-zero number
     //Recursively flood fill algorithm
     public void floodFill(int row, int col) {
