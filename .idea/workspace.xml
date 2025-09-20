@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added readme.md file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -434,14 +431,29 @@
       <option name="project" value="LOCAL" />
       <updated>1758371147507</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Added docker files for different systems support">
+      <option name="closed" value="true" />
+      <created>1758372671583</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1758372671583</updated>
+    </task>
+    <task id="LOCAL-00026" summary="added readme.md file">
+      <option name="closed" value="true" />
+      <created>1758372711023</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1758372711023</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added mockito because there are user inputs from console." />
     <MESSAGE value="Created class Diagram" />
     <MESSAGE value="Updated some classes in class diagrams on second look" />
     <MESSAGE value="created commandprocessor, game and gamestatus classes" />
@@ -465,7 +477,9 @@
     <MESSAGE value="added function and test cases for testPlayGame" />
     <MESSAGE value="Added remaining CommandProcessor checks for correct flow of flow." />
     <MESSAGE value="Cleaned up UI when the numbers dont align with the grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up UI when the numbers dont align with the grid" />
+    <MESSAGE value="Added docker files for different systems support" />
+    <MESSAGE value="added readme.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readme.md file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
