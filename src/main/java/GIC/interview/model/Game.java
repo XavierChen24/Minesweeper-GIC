@@ -12,10 +12,6 @@ public class Game {
         gameStatus = GameStatus.CONTINUE;
     }
 
-    //Print the game results for the user
-    public void printResults() {
-    }
-
     //print the entire grid for the fields that is revealed
     public void printGrid() {
         StringBuilder sb = new StringBuilder();
@@ -42,8 +38,6 @@ public class Game {
         System.out.print(sb);
     }
 
-
-
     public GameStatus getGameStatus() {
         return gameStatus;
     }
@@ -67,7 +61,7 @@ public class Game {
         } else {
             //positive case for a selected square.
             if (square.getAdjacentMines() == 0) {
-                floodFill(x, y);
+                floodFill(y,x);
             } else {
                 square.reveal();
                 grid.reduceSpacesLeft(1);
@@ -83,6 +77,10 @@ public class Game {
 
     public void setGrid(Grid grid) {
         this.grid = grid;
+    }
+
+    public Grid getGrid() {
+        return this.grid;
     }
 
     //When the user selects a 0, the surrounding should open up till it reaches a non-zero number
@@ -113,6 +111,5 @@ public class Game {
     public boolean isInBounds(int row, int col) {
         return row >= 0 && row < grid.getSize() && col >= 0 && col < grid.getSize();
     }
-
 
 }
