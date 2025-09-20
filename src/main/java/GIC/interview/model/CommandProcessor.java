@@ -41,7 +41,7 @@ public class CommandProcessor {
                     System.out.print("Select a square to reveal (e.g. A1): ");
                     String selectionInput = scanner.nextLine();
 
-                    validateSquareSelection(size, selectionInput);
+                    SquareSelection selectedSquare = validateSquareSelection(size, selectionInput);
 
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
