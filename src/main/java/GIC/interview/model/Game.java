@@ -13,7 +13,8 @@ public class Game {
     }
 
     //Print the game results for the user
-    public void printResults(){}
+    public void printResults() {
+    }
 
     //print the entire grid for the fields that is revealed
     public void printGrid() {
@@ -32,7 +33,7 @@ public class Game {
                 if (grid[i][j].isRevealed()) {
                     String adjacentMines = String.valueOf(grid[i][j].getAdjacentMines());
                     sb.append(" ").append(adjacentMines);
-                }else {
+                } else {
                     sb.append(" ").append('-');
                 }
             }
@@ -58,8 +59,26 @@ public class Game {
 
     //When the user selects a 0, the surrounding should open up till it reaches a non-zero number
     //Recursively flood fill algorithm
-    public void floodFill(){
+    public void floodFill(int row, int col) {
+        Square[][] squares = grid.getSquares();
+        // Base case
+        if (!isInBounds(row, col) || squares[row][col].isRevealed() || squares[row][col].getIsMine()) return;
 
+        squares[row][col].reveal();
+        grid.reduceSpacesLeft(1);
+
+        if (squares[row][col].getAdjacentMines() == 0) {
+            // Recursively reveal all neighbors
+            for (int dr = -1; dr <= 1; dr++) {
+                for (int dc = -1; dc <= 1; dc++) {
+                    // Skip the current cell
+                    if (dr == 0 && dc == 0){
+                        continue;
+                    }
+                    floodFill(row + dr, col + dc);
+                }
+            }
+        }
     }
 
     //Checks if the row and column is within the dimensions of the grid.

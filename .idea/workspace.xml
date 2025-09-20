@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="improved on the error test cases in validateSquareSelection">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added floodfill function, added isInboundsFunction and test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Grid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +62,12 @@
     "JUnit.CommandProcessorTest.validateInitialInputTests.executor": "Run",
     "JUnit.CommandProcessorTest.validateMinesInputTests.executor": "Debug",
     "JUnit.CommandProcessorTest.validateSquareSelectionTest.executor": "Run",
+    "JUnit.GameTest.executor": "Run",
     "JUnit.GameTest.floodFillTest.executor": "Run",
+    "JUnit.GameTest.floodFillTest_negativeFlow.executor": "Run",
+    "JUnit.GameTest.floodFillTest_negativeFlow2.executor": "Run",
+    "JUnit.GameTest.floodFillTest_positiveFlow.executor": "Run",
+    "JUnit.GameTest.floodFillTest_positiveFlow2.executor": "Run",
     "JUnit.GameTest.isInBounds.executor": "Run",
     "JUnit.GameTest.printGrid.executor": "Run",
     "JUnit.GameTest.printGridSizeEquals26.executor": "Run",
@@ -113,37 +119,8 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.isInBounds">
-    <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CommandProcessorTest.validateSquareSelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.CommandProcessorTest" />
-      <option name="METHOD_NAME" value="validateSquareSelectionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.floodFillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.GameTest.floodFillTest_negativeFlow2">
+    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -153,13 +130,12 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="floodFillTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.isInBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.floodFillTest_negativeFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -169,13 +145,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="isInBounds" />
+      <option name="METHOD_NAME" value="floodFillTest_negativeFlow" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.testPlayGame" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.floodFillTest_negativeFlow2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -185,7 +161,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="testPlayGame" />
+      <option name="METHOD_NAME" value="floodFillTest_negativeFlow2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.floodFillTest_positiveFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
+      <option name="METHOD_NAME" value="floodFillTest_positiveFlow" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.floodFillTest_positiveFlow2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
+      <option name="METHOD_NAME" value="floodFillTest_positiveFlow2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,11 +212,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GameTest.isInBounds" />
-        <item itemvalue="JUnit.CommandProcessorTest.validateSquareSelectionTest" />
-        <item itemvalue="JUnit.GameTest.floodFillTest" />
-        <item itemvalue="JUnit.GameTest.testPlayGame" />
-        <item itemvalue="Application.Minesweeper" />
+        <item itemvalue="JUnit.GameTest.floodFillTest_negativeFlow2" />
+        <item itemvalue="JUnit.GameTest" />
+        <item itemvalue="JUnit.GameTest.floodFillTest_negativeFlow" />
+        <item itemvalue="JUnit.GameTest.floodFillTest_positiveFlow2" />
+        <item itemvalue="JUnit.GameTest.floodFillTest_positiveFlow" />
       </list>
     </recent_temporary>
   </component>
@@ -230,7 +238,7 @@
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
       <workItem from="1758274251822" duration="11011000" />
-      <workItem from="1758295204257" duration="5955000" />
+      <workItem from="1758295204257" duration="10356000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />
@@ -376,7 +384,15 @@
       <option name="project" value="LOCAL" />
       <updated>1758339991053</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added floodfill function, added isInboundsFunction and test">
+      <option name="closed" value="true" />
+      <created>1758340923691</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1758340923691</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,9 +417,24 @@
     <MESSAGE value="added validation for the selected square input." />
     <MESSAGE value="added play game test function. partial commit because missing the reveal function in the minesweeper." />
     <MESSAGE value="improved on the error test cases in validateSquareSelection" />
-    <option name="LAST_COMMIT_MESSAGE" value="improved on the error test cases in validateSquareSelection" />
+    <MESSAGE value="added floodfill function, added isInboundsFunction and test" />
+    <option name="LAST_COMMIT_MESSAGE" value="added floodfill function, added isInboundsFunction and test" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
+          <line>179</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="GIC.interview.model.Game" memberName="grid" />

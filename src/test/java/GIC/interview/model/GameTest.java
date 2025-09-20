@@ -96,7 +96,7 @@ class GameTest {
         newGame.setGrid(nonRandomGrid);
         newGame.printGrid();
 
-        newGame.playGame(new SquareSelection(0,0));
+        newGame.playGame(new SquareSelection(0, 0));
 
         newGame.printGrid();
 
