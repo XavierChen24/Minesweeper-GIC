@@ -101,4 +101,47 @@ class GameTest {
         newGame.printGrid();
 
     }
+
+    @Test
+    void floodFillTest() {
+        int size = 4;
+        int minesCount = 1;
+        Random notRandom = new Random(1);
+
+        Grid nonRandomGrid = new Grid(size, minesCount, notRandom);
+
+
+        System.out.println("Generated Grid is the following");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                if (nonRandomGrid.getSquares()[i][j].getIsMine()) {
+                    System.out.print("M" + ' ');
+                } else {
+                    System.out.print(String.valueOf(nonRandomGrid.getSquares()[i][j].getAdjacentMines()) + ' ');
+                }
+            }
+            System.out.print("\n");
+        }
+
+        Game newGame = new Game(size, minesCount);
+        newGame.setGrid(nonRandomGrid);
+        System.out.println("Current unrevealed grid is below");
+        newGame.printGrid();
+
+        newGame.floodFill();
+
+    }
+
+    @Test
+    void isInBoundsTest() throws NoSuchMethodException {
+        int size = 4;
+        int minesCount = 1;
+
+        Game newGame = new Game(size, minesCount);
+        assertTrue(newGame.isInBounds(0, 0), "0,0 is within the size of 4");
+        assertFalse(newGame.isInBounds(4, 0), "4,0 is outside of the size of 4");
+        assertFalse(newGame.isInBounds(0, 4), "0,4 is outside of the size of 4");
+        assertFalse(newGame.isInBounds(-1, -1000), "0,4 is outside of the size of 4");
+
+    }
 }

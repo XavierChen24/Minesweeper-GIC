@@ -56,5 +56,16 @@ public class Game {
         this.grid = grid;
     }
 
+    //When the user selects a 0, the surrounding should open up till it reaches a non-zero number
+    //Recursively flood fill algorithm
+    public void floodFill(){
+
+    }
+
+    //Checks if the row and column is within the dimensions of the grid.
+    public boolean isInBounds(int row, int col) {
+        return row >= 0 && row < grid.getSize() && col >= 0 && col < grid.getSize();
+    }
+
 
 }

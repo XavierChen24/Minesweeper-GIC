@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added square selection parser and validator">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="improved on the error test cases in validateSquareSelection">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/CommandProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GIC/interview/model/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GIC/interview/model/GameTest.java" afterDir="false" />
     </list>
@@ -25,6 +24,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -56,7 +60,9 @@
     "JUnit.CommandProcessorTest.validateGridSizeTests.executor": "Run",
     "JUnit.CommandProcessorTest.validateInitialInputTests.executor": "Run",
     "JUnit.CommandProcessorTest.validateMinesInputTests.executor": "Debug",
-    "JUnit.CommandProcessorTest.validateSquareSelectionTest.executor": "Debug",
+    "JUnit.CommandProcessorTest.validateSquareSelectionTest.executor": "Run",
+    "JUnit.GameTest.floodFillTest.executor": "Run",
+    "JUnit.GameTest.isInBounds.executor": "Run",
     "JUnit.GameTest.printGrid.executor": "Run",
     "JUnit.GameTest.printGridSizeEquals26.executor": "Run",
     "JUnit.GameTest.testGenerateGridDimensions.executor": "Debug",
@@ -72,7 +78,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "play-game-function",
     "junie.onboarding.icon.badge.shown": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/xavier/Desktop/Repos/interviews/Minesweeper--GIC-Interview-main",
@@ -107,7 +113,7 @@
       <recent name="GIC.interview" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.GameTest.testPlayGame">
+  <component name="RunManager" selected="JUnit.GameTest.isInBounds">
     <configuration name="Minesweeper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GIC.interview.Minesweeper" />
       <module name="test" />
@@ -137,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.printGridSizeEquals26" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.floodFillTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
         <pattern>
@@ -147,7 +153,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="GIC.interview.model" />
       <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
-      <option name="METHOD_NAME" value="printGridSizeEquals26" />
+      <option name="METHOD_NAME" value="floodFillTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.isInBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GIC.interview.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="GIC.interview.model" />
+      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.GameTest" />
+      <option name="METHOD_NAME" value="isInBounds" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -169,22 +191,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SquareSelectionTest.SquareSelectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="GIC.interview.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="GIC.interview.model" />
-      <option name="MAIN_CLASS_NAME" value="GIC.interview.model.SquareSelectionTest" />
-      <option name="METHOD_NAME" value="SquareSelectionTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Minesweeper--GIC-Interview" />
       <method v="2">
@@ -198,11 +204,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.isInBounds" />
+        <item itemvalue="JUnit.CommandProcessorTest.validateSquareSelectionTest" />
+        <item itemvalue="JUnit.GameTest.floodFillTest" />
         <item itemvalue="JUnit.GameTest.testPlayGame" />
         <item itemvalue="Application.Minesweeper" />
-        <item itemvalue="JUnit.CommandProcessorTest.validateSquareSelectionTest" />
-        <item itemvalue="JUnit.SquareSelectionTest.SquareSelectionTest" />
-        <item itemvalue="JUnit.GameTest.printGridSizeEquals26" />
       </list>
     </recent_temporary>
   </component>
@@ -224,7 +230,7 @@
       <workItem from="1758081972978" duration="15174000" />
       <workItem from="1758114762234" duration="27402000" />
       <workItem from="1758274251822" duration="11011000" />
-      <workItem from="1758295204257" duration="2985000" />
+      <workItem from="1758295204257" duration="5955000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />
@@ -346,7 +352,31 @@
       <option name="project" value="LOCAL" />
       <updated>1758287415707</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added validation for the selected square input.">
+      <option name="closed" value="true" />
+      <created>1758337920853</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1758337920853</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added play game test function. partial commit because missing the reveal function in the minesweeper.">
+      <option name="closed" value="true" />
+      <created>1758338004791</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1758338004791</updated>
+    </task>
+    <task id="LOCAL-00018" summary="improved on the error test cases in validateSquareSelection">
+      <option name="closed" value="true" />
+      <created>1758339991053</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1758339991053</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -368,6 +398,16 @@
     <MESSAGE value="Added print grid function and tests" />
     <MESSAGE value="Added print grid function to the overall application" />
     <MESSAGE value="added square selection parser and validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="added square selection parser and validator" />
+    <MESSAGE value="added validation for the selected square input." />
+    <MESSAGE value="added play game test function. partial commit because missing the reveal function in the minesweeper." />
+    <MESSAGE value="improved on the error test cases in validateSquareSelection" />
+    <option name="LAST_COMMIT_MESSAGE" value="improved on the error test cases in validateSquareSelection" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="GIC.interview.model.Game" memberName="grid" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>
