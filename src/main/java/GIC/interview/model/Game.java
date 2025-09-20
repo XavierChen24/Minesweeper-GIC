@@ -15,11 +15,18 @@ public class Game {
     //print the entire grid for the fields that is revealed
     public void printGrid() {
         StringBuilder sb = new StringBuilder();
-
         int size = this.grid.getSize();
-        sb.append("  ");
+
+        boolean isLargerGrid = size >= 10;
+        String squareSpacing = isLargerGrid ? "  " : " ";
+        if (isLargerGrid) {
+            sb.append("   ");
+        } else {
+            sb.append("  ");
+        }
+
         for (int i = 0; i < size; i++) {
-            sb.append(i + 1).append(" ");
+            sb.append(i + 1).append(i < 9 ? squareSpacing : " ");
         }
         sb.append("\n");
         Square[][] grid = this.grid.getSquares();
@@ -28,9 +35,9 @@ public class Game {
             for (int j = 0; j < grid[i].length; j++) {
                 if (grid[i][j].isRevealed()) {
                     String adjacentMines = String.valueOf(grid[i][j].getAdjacentMines());
-                    sb.append(" ").append(adjacentMines);
+                    sb.append(squareSpacing).append(adjacentMines);
                 } else {
-                    sb.append(" ").append('-');
+                    sb.append(squareSpacing).append('-');
                 }
             }
             sb.append("\n");
@@ -61,7 +68,7 @@ public class Game {
         } else {
             //positive case for a selected square.
             if (square.getAdjacentMines() == 0) {
-                floodFill(y,x);
+                floodFill(y, x);
             } else {
                 square.reveal();
                 grid.reduceSpacesLeft(1);
