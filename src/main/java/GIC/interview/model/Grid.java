@@ -5,6 +5,7 @@ import java.util.Random;
 public class Grid {
     private Square[][] squares;
     private int size;
+
     private int spacesLeft;
     private int mines;
 
@@ -65,6 +66,14 @@ public class Grid {
                 }
             }
         }
+    }
+
+    public void reduceSpacesLeft(int i) {
+        this.spacesLeft -= i;
+    }
+
+    public int getSpacesLeft() {
+        return spacesLeft;
     }
 
     public Square[][] getSquares() {
