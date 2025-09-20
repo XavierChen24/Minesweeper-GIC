@@ -15,8 +15,8 @@ public class Square {
         return revealed;
     }
 
-    public boolean reveal() {
-        return this.revealed = true;
+    public void reveal() {
+        this.revealed = true;
     }
 
     public void setIsMine() {

@@ -34,6 +34,7 @@ public class CommandProcessor {
                 continue;
             } catch (IllegalArgumentException e) {
                 System.out.println(e.getMessage());
+                continue;
             }
             while (game.getGameStatus() == GameStatus.CONTINUE) {
                 try {
@@ -44,11 +45,20 @@ public class CommandProcessor {
                     SquareSelection selectedSquare = validateSquareSelection(size, selectionInput);
 
                     game.playGame(selectedSquare);
+                    if (game.getGameStatus() == GameStatus.LOSE) {
+                        System.out.println("Oh no, you detonated a mine! Game over.");
+                        break;
+                    } else if (game.getGameStatus() == GameStatus.WIN) {
+                        System.out.println("Congratulations, you have won the game!");
+                        break;
+                    }
+                    System.out.println("Here is your updated minefield:");
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
                 }
             }
-
+            System.out.println("Press enter key to play again...");
+            scanner.nextLine();
         }
     }
 
