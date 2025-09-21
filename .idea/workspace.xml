@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added readme.md file">
+    <list default="true" id="d99c622b-1fab-47fa-9792-d8c20d214f4b" name="Changes" comment="added plugin that runs the test before build">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,63 +53,63 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Application.Minesweeper.executor": "Debug",
-    "Docker.Dockerfile.executor": "Run",
-    "Docker.docker-compose.yml: Compose Deployment.executor": "Run",
-    "JUnit.CommandProcessorTest.executor": "Run",
-    "JUnit.CommandProcessorTest.testSingleIntegerInput.executor": "Debug",
-    "JUnit.CommandProcessorTest.validateGridSizeTests.executor": "Run",
-    "JUnit.CommandProcessorTest.validateInitialInputTests.executor": "Run",
-    "JUnit.CommandProcessorTest.validateMinesInputTests.executor": "Debug",
-    "JUnit.CommandProcessorTest.validateSquareSelectionTest.executor": "Run",
-    "JUnit.GameTest.executor": "Run",
-    "JUnit.GameTest.floodFillTest.executor": "Run",
-    "JUnit.GameTest.floodFillTest_negativeFlow.executor": "Run",
-    "JUnit.GameTest.floodFillTest_negativeFlow2.executor": "Run",
-    "JUnit.GameTest.floodFillTest_positiveFlow.executor": "Run",
-    "JUnit.GameTest.floodFillTest_positiveFlow2.executor": "Run",
-    "JUnit.GameTest.isInBounds.executor": "Run",
-    "JUnit.GameTest.printGrid.executor": "Run",
-    "JUnit.GameTest.printGridSizeEquals26.executor": "Run",
-    "JUnit.GameTest.printGridSizeEquals5.executor": "Run",
-    "JUnit.GameTest.testGenerateGridDimensions.executor": "Debug",
-    "JUnit.GameTest.testPlayGame.executor": "Run",
-    "JUnit.GameTest.testPlayGame_error.executor": "Debug",
-    "JUnit.GameTest.testPlayGame_lose1.executor": "Run",
-    "JUnit.GameTest.testPlayGame_postiveFlow.executor": "Run",
-    "JUnit.GameTest.testPlayGame_win1.executor": "Run",
-    "JUnit.GameTest.testPlayGame_win2.executor": "Run",
-    "JUnit.GridTest.executor": "Debug",
-    "JUnit.GridTest.testAdjacentSquares.executor": "Run",
-    "JUnit.GridTest.testGenerateGridDimensions.executor": "Run",
-    "JUnit.GridTest.testMinesCount.executor": "Run",
-    "JUnit.SquareSelectionTest.SquareSelectionTest.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/xavier/Desktop/Repos/interviews/Minesweeper--GIC-Interview-main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Application.Minesweeper.executor&quot;: &quot;Debug&quot;,
+    &quot;Docker.Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandProcessorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandProcessorTest.testSingleIntegerInput.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CommandProcessorTest.validateGridSizeTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandProcessorTest.validateInitialInputTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommandProcessorTest.validateMinesInputTests.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CommandProcessorTest.validateSquareSelectionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.floodFillTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.floodFillTest_negativeFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.floodFillTest_negativeFlow2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.floodFillTest_positiveFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.floodFillTest_positiveFlow2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.isInBounds.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.printGrid.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.printGridSizeEquals26.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.printGridSizeEquals5.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.testGenerateGridDimensions.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GameTest.testPlayGame.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.testPlayGame_error.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GameTest.testPlayGame_lose1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.testPlayGame_postiveFlow.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.testPlayGame_win1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GameTest.testPlayGame_win2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GridTest.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.GridTest.testAdjacentSquares.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GridTest.testGenerateGridDimensions.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.GridTest.testMinesCount.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SquareSelectionTest.SquareSelectionTest.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/xavier/Desktop/Repos/interviews/Minesweeper--GIC-Interview-main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="GIC.interview" />
@@ -194,11 +193,15 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
@@ -238,6 +241,7 @@
       <workItem from="1758114762234" duration="27402000" />
       <workItem from="1758274251822" duration="11011000" />
       <workItem from="1758295204257" duration="22284000" />
+      <workItem from="1758374085741" duration="693000" />
     </task>
     <task id="LOCAL-00001" summary="added mockito because there are user inputs from console.">
       <option name="closed" value="true" />

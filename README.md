@@ -23,7 +23,8 @@ mvn clean package && java -jar target/app-1.0-SNAPSHOT.jar
 1. Select the size of the grid.
 2. Enter the number of mines in the grid
 3. Select a square to reveal.
-4. When there are no more squares to reveal, YOU WIN!
+4. When there are no more squares to reveal, git status
+5. YOU WIN!
 
 ## Brief explanation & assumptions
 1. The vertical column will go from A-Z. Thus, the limit for size is 26.
