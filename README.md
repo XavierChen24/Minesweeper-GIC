@@ -23,7 +23,7 @@ mvn clean package && java -jar target/app-1.0-SNAPSHOT.jar
 1. Select the size of the grid.
 2. Enter the number of mines in the grid
 3. Select a square to reveal.
-4. When there are no more squares to reveal, git status
+4. When there are no more squares to reveal.
 5. YOU WIN!
 
 ## Brief explanation & assumptions
